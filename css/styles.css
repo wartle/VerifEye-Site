@@ -620,6 +620,13 @@ p {
     position: relative;
 }
 
+.cta-section__badges {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
 /* --- Footer --- */
 .footer {
     border-top: 1px solid var(--border);
