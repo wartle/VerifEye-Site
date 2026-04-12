@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VerifEye — Turn Every Photo Into Verified Proof</title>
-    <meta name="description" content="VerifEye burns GPS coordinates, map thumbnails, addresses, timestamps, and more directly onto your photos. Verifiable proof of location, on-device.">
+    <title>VerifEye: Geotag Camera — Turn Every Photo Into Verified Proof</title>
+    <meta name="description" content="VerifEye: Geotag Camera burns GPS coordinates, map thumbnails, addresses, timestamps, and more directly onto your photos. Verifiable proof of location, on-device.">
     <link rel="icon" type="image/png" href="images/icons/VerifEye AppIcon.png">
     <link rel="apple-touch-icon" href="images/icons/VerifEye AppIcon.png">
     <link rel="stylesheet" href="css/styles.css">
@@ -14,9 +14,12 @@
     <!-- Header -->
     <header class="header">
         <div class="header__inner">
-            <a href="index.html" class="header__logo">
-                <img src="images/icons/VerifEye AppIcon.png" alt="VerifEye icon">
-                VerifEye
+            <a href="index.html" class="header__logo" aria-label="VerifEye: Geotag Camera — Home">
+                <img src="images/icons/VerifEye AppIcon.png" alt="" width="36" height="36">
+                <span class="header__logo-text">
+                    <span class="header__logo-title">VerifEye</span>
+                    <span class="header__logo-subtitle">Geotag Camera</span>
+                </span>
             </a>
             <nav class="header__nav">
                 <a href="#features">Features</a>
@@ -39,7 +42,7 @@
         <h1>Turn Every Photo Into Verified Proof</h1>
         <p class="hero__subtitle">GPS coordinates, map snapshots, addresses, and timestamps — composited directly onto your photos, on-device.</p>
         <div class="hero__actions">
-            <a href="#" class="btn-appstore" aria-label="Download on the App Store">
+            <a href="https://apps.apple.com/ph/app/verifeye-geotag-camera/id6761422889" class="btn-appstore" aria-label="Download VerifEye: Geotag Camera on the App Store">
                 <img src="images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" height="52">
             </a>
             <a href="https://play.google.com/store/apps/details?id=app.wartle.verifeye" class="btn-appstore" aria-label="Get it on Google Play">
@@ -49,7 +52,9 @@
         </div>
         <div class="hero__image-wrapper">
             <div class="hero__image-glow"></div>
-            <img src="images/feature.png" alt="VerifEye photo detail showing map overlay, GPS coordinates, and address" class="hero__image">
+            <div class="media-skeleton media-skeleton--hero">
+                <img src="images/feature.png" alt="VerifEye: Geotag Camera photo detail showing map overlay, GPS coordinates, and address" class="hero__image media-skeleton__img" width="1024" height="500" decoding="async">
+            </div>
         </div>
     </section>
 
@@ -120,17 +125,23 @@
             </div>
             <div class="showcase__grid stagger-children">
                 <div class="showcase__item fade-in">
-                    <img src="images/screenshots/screenshot-1.png" alt="VerifEye camera view with live GPS coordinates">
+                    <div class="media-skeleton media-skeleton--phone">
+                        <img src="images/screenshots/screenshot-1.png" alt="VerifEye: Geotag Camera live viewfinder with GPS coordinates" class="media-skeleton__img" width="600" height="1303" loading="lazy" decoding="async">
+                    </div>
                     <p>Camera View</p>
                     <span class="showcase__caption">Live viewfinder with real-time GPS</span>
                 </div>
                 <div class="showcase__item fade-in">
-                    <img src="images/screenshots/screenshot-2.png" alt="Photo detail with map overlay and location data">
+                    <div class="media-skeleton media-skeleton--phone">
+                        <img src="images/screenshots/screenshot-2.png" alt="Photo detail with map overlay and location data" class="media-skeleton__img" width="600" height="1303" loading="lazy" decoding="async">
+                    </div>
                     <p>Photo Detail</p>
                     <span class="showcase__caption">Map, coordinates, address & altitude</span>
                 </div>
                 <div class="showcase__item fade-in">
-                    <img src="images/screenshots/screenshot-3.png" alt="Location opened in Apple Maps">
+                    <div class="media-skeleton media-skeleton--phone">
+                        <img src="images/screenshots/screenshot-3.png" alt="Location opened in Apple Maps" class="media-skeleton__img" width="600" height="1303" loading="lazy" decoding="async">
+                    </div>
                     <p>Maps Integration</p>
                     <span class="showcase__caption">Open any location in Apple Maps</span>
                 </div>
@@ -143,7 +154,7 @@
         <h2 class="fade-in">Start Verifying Your Photos Today</h2>
         <p class="fade-in">Free download. No account required.</p>
         <div class="fade-in cta-section__badges">
-            <a href="#" class="btn-appstore" aria-label="Download on the App Store">
+            <a href="https://apps.apple.com/ph/app/verifeye-geotag-camera/id6761422889" class="btn-appstore" aria-label="Download VerifEye: Geotag Camera on the App Store">
                 <img src="images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" height="52">
             </a>
             <a href="https://play.google.com/store/apps/details?id=app.wartle.verifeye" class="btn-appstore" aria-label="Get it on Google Play">

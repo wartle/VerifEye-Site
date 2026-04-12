@@ -186,6 +186,86 @@ p {
     height: 36px;
     border-radius: 8px;
     box-shadow: var(--shadow-sm);
+    flex-shrink: 0;
+}
+
+.header__logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.15;
+}
+
+.header__logo-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.header__logo-subtitle {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+/* --- Image load placeholders --- */
+@keyframes media-shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.media-skeleton {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        105deg,
+        #dbe8e5 0%,
+        #eef6f4 42%,
+        #dbe8e5 88%
+    );
+    background-size: 200% 100%;
+    animation: media-shimmer 1.35s ease-in-out infinite;
+}
+
+.media-skeleton--hero {
+    display: block;
+    max-width: 340px;
+    margin: 0 auto;
+    border-radius: var(--radius-lg);
+}
+
+.media-skeleton--phone {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    border-radius: var(--radius-md);
+}
+
+.media-skeleton.is-loaded {
+    animation: none;
+    background: transparent;
+}
+
+.media-skeleton__img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.45s ease;
+}
+
+.media-skeleton.is-loaded .media-skeleton__img {
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .media-skeleton {
+        animation: none;
+        background: var(--bg-secondary);
+    }
 }
 
 .header__nav {
@@ -560,7 +640,7 @@ p {
     transform: translateY(-8px);
 }
 
-.showcase__item img {
+.showcase__item .media-skeleton__img {
     width: 100%;
     max-width: 280px;
     margin: 0 auto;
@@ -569,7 +649,7 @@ p {
     transition: box-shadow 0.4s;
 }
 
-.showcase__item:hover img {
+.showcase__item:hover .media-skeleton__img {
     box-shadow: var(--shadow-lg), var(--shadow-glow);
 }
 
@@ -903,7 +983,7 @@ p {
         gap: 48px;
     }
 
-    .showcase__item img {
+    .showcase__item .media-skeleton__img {
         max-width: 240px;
     }
 

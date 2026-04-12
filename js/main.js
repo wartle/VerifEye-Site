@@ -61,3 +61,15 @@ if (fadeEls.length > 0) {
 
     fadeEls.forEach(el => observer.observe(el));
 }
+
+// Image skeleton: fade in when decoded (shows shimmer while loading)
+document.querySelectorAll('.media-skeleton__img').forEach(img => {
+    const wrap = img.closest('.media-skeleton');
+    const markLoaded = () => wrap?.classList.add('is-loaded');
+    if (img.complete && img.naturalWidth > 0) {
+        markLoaded();
+    } else {
+        img.addEventListener('load', markLoaded, { once: true });
+        img.addEventListener('error', markLoaded, { once: true });
+    }
+});
