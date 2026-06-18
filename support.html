@@ -8,7 +8,11 @@
     <link rel="icon" type="image/png" href="images/icons/default.png">
     <link rel="icon" type="image/png" href="images/icons/dark.png" media="(prefers-color-scheme: dark)">
     <link rel="apple-touch-icon" href="images/icons/default.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap">
     <link rel="stylesheet" href="css/styles.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
@@ -22,14 +26,14 @@
                     <span class="header__logo-subtitle">GeoTag Camera</span>
                 </span>
             </a>
-            <nav class="header__nav">
+            <nav class="header__nav" id="site-nav" aria-label="Primary">
                 <a href="index.html#features">Features</a>
                 <a href="index.html#showcase">Screenshots</a>
                 <a href="support.html">Support</a>
                 <a href="contact.html">Contact</a>
                 <a href="index.html#download" class="header__cta">Download</a>
             </nav>
-            <button class="header__hamburger" aria-label="Menu">
+            <button class="header__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -39,79 +43,87 @@
 
     <!-- Page Header -->
     <section class="page-header">
-        <h1>Support</h1>
-        <p>How can we help?</p>
+        <div class="page-header__grid"></div>
+        <span class="corner corner--tl"></span>
+        <span class="corner corner--tr"></span>
+        <span class="corner corner--bl"></span>
+        <span class="corner corner--br"></span>
+        <div class="page-header__inner">
+            <span class="mono-label">Support</span>
+            <h1>How can we help?</h1>
+            <p>Answers to common questions — or a direct line to us</p>
+        </div>
     </section>
 
     <!-- Content -->
-    <section class="section">
+    <section class="section page-body">
         <div class="container--narrow">
 
             <!-- Contact Card -->
             <div class="content-card contact-card fade-in">
-                <h2>Get in Touch</h2>
+                <h2>Get in touch</h2>
                 <p>Have a question or running into an issue? We're here to help.</p>
                 <p>Email us at <strong>support@wartle.app</strong> and we'll get back to you within 24–48 hours.</p>
-                <a href="mailto:support@wartle.app" class="btn btn-primary">Email Support</a>
+                <a href="mailto:support@wartle.app" class="btn btn-primary">Email support</a>
             </div>
 
             <!-- FAQ -->
             <div class="content-card fade-in">
-                <h2>Frequently Asked Questions</h2>
+                <h2>Frequently asked questions</h2>
 
                 <div class="faq-item">
-                    <h3>What location data does VerifEye add to my captures?</h3>
+                    <h3><span class="q">01</span> What location data does VerifEye add to my captures?</h3>
                     <p>VerifEye can overlay GPS coordinates, a reverse-geocoded address, a map thumbnail, date and time, altitude, barometric pressure, current weather, GPS accuracy, Plus Code, timezone, and a custom note or hashtag — on both photos and videos. You choose exactly which data appears.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3>Can I customize how the overlay looks?</h3>
-                    <p>Yes. You can choose between a clean strip below the photo or a floating overlay panel. You can also pick which data fields to include, select coordinate formats (decimal, degrees & minutes, DMS, or Plus Codes), and choose date/time formats. You can even add your own logo in any corner.</p>
+                    <h3><span class="q">02</span> Can I customize how the overlay looks?</h3>
+                    <p>Yes. You can choose between a clean strip below the photo or a floating overlay panel. You can also pick which data fields to include, select coordinate formats (decimal, degrees &amp; minutes, DMS, or Plus Codes), and choose date/time formats. You can even add your own logo in any corner.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3>Can I record video with the location overlay?</h3>
+                    <h3><span class="q">03</span> Can I record video with the location overlay?</h3>
                     <p>Yes. VerifEye records video with the live GPS overlay burned directly into the footage, and it logs the full location track for the clip — exportable as GPX, CSV, or KML. You can also choose a video stabilization mode and capture in HDR.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3>What do the 3D Scan and 360° features do?</h3>
+                    <h3><span class="q">04</span> What do the 3D Scan and 360° features do?</h3>
                     <p>On supported iPhones, VerifEye captures 3D scans — LiDAR room scans or photogrammetry object scans — with floor-area and volume metrics and USDZ / PLY export. The 360° PhotoSphere mode stitches a full panorama you can explore by drag or gyro, and export as a geotagged Tiny Planet.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3>Does VerifEye upload my photos to the cloud?</h3>
+                    <h3><span class="q">05</span> Does VerifEye upload my photos to the cloud?</h3>
                     <p>Capture and overlay compositing happen entirely on your device, and there are no accounts or sign-ins. On iPhone and iPad, cloud sync is an optional, off-by-default feature that syncs your library through your own private iCloud Drive — never our servers. The Android version keeps everything on the device. See our <a href="privacy.html">Privacy Policy</a> for the full detail.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3>What GPS coordinate formats are supported?</h3>
+                    <h3><span class="q">06</span> What GPS coordinate formats are supported?</h3>
                     <p>VerifEye supports four formats: decimal degrees (e.g., 10.3186, 123.9057), degrees and decimal minutes, full DMS notation (degrees, minutes, seconds), and Plus Codes for universal location sharing.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3>Which devices are supported?</h3>
+                    <h3><span class="q">07</span> Which devices are supported?</h3>
                     <p>VerifEye runs on iPhone (App Store) and Android (Google Play). Multi-lens features (ultra-wide, telephoto) need a device that has those lenses, and LiDAR room scanning requires a Pro iPhone with a LiDAR sensor.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3>Is VerifEye free? What does Pro unlock?</h3>
+                    <h3><span class="q">08</span> Is VerifEye free? What does Pro unlock?</h3>
                     <p>The core geotag photo camera is free. Premium capabilities — GPS video recording, 3D / LiDAR scanning, 360° photos, iCloud sync (iOS), and offline maps — are available through a Pro subscription, and several modules can also be unlocked individually as one-time purchases.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3>How do I add my company logo?</h3>
+                    <h3><span class="q">09</span> How do I add my company logo?</h3>
                     <p>In the overlay settings, you can select an image from your photo library to use as a logo or branding mark. You can position it in any corner of the photo.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3>Can I organize my captures into albums?</h3>
+                    <h3><span class="q">10</span> Can I organize my captures into albums?</h3>
                     <p>Yes. Photos, videos, and 3D scans share one unified gallery, and you can create albums to keep projects, job sites, or assignments separate. Browse in a grid, multi-select, share in bulk, or open any location directly in Maps.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3>How accurate is the GPS data?</h3>
-                    <p>VerifEye uses your iPhone's built-in GPS hardware. Accuracy depends on your environment — typically within a few meters outdoors. The GPS accuracy value is displayed on the overlay so you can verify precision for each shot.</p>
+                    <h3><span class="q">11</span> How accurate is the GPS data?</h3>
+                    <p>VerifEye uses your device's built-in GPS hardware. Accuracy depends on your environment — typically within a few meters outdoors. The GPS accuracy value is displayed on the overlay so you can verify precision for each shot.</p>
                 </div>
             </div>
 
@@ -121,7 +133,10 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer__inner">
-            <p class="footer__copy">&copy; 2026 Walter S. All rights reserved.</p>
+            <div>
+                <div class="footer__coords"><span class="rec-dot"></span> 10.3186°N · 123.9057°E · VERIFEYE</div>
+                <p class="footer__copy">&copy; 2026 Walter S. All rights reserved.</p>
+            </div>
             <div class="footer__links">
                 <a href="support.html">Support</a>
                 <a href="contact.html">Contact</a>

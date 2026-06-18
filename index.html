@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VerifEye: GeoTag Camera — Turn Every Photo & Video Into Verified Proof</title>
-    <meta name="description" content="VerifEye: GeoTag Camera burns GPS coordinates, map thumbnails, addresses, and timestamps onto your photos and videos — and captures 3D LiDAR scans and 360° panoramas. Verifiable proof of location, on-device.">
+    <meta name="description" content="VerifEye: GeoTag Camera burns GPS coordinates, map thumbnails, addresses, and timestamps onto your photos and videos — and captures 3D scans and 360° panoramas. Verifiable proof of location, on-device.">
     <link rel="icon" type="image/png" href="images/icons/default.png">
     <link rel="icon" type="image/png" href="images/icons/dark.png" media="(prefers-color-scheme: dark)">
     <link rel="apple-touch-icon" href="images/icons/default.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap">
     <link rel="stylesheet" href="css/styles.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
@@ -22,14 +26,14 @@
                     <span class="header__logo-subtitle">GeoTag Camera</span>
                 </span>
             </a>
-            <nav class="header__nav">
+            <nav class="header__nav" id="site-nav" aria-label="Primary">
                 <a href="#features">Features</a>
                 <a href="#showcase">Screenshots</a>
                 <a href="support.html">Support</a>
                 <a href="contact.html">Contact</a>
                 <a href="#download" class="header__cta">Download</a>
             </nav>
-            <button class="header__hamburger" aria-label="Menu">
+            <button class="header__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -37,154 +41,266 @@
         </div>
     </header>
 
-    <!-- Hero -->
+    <!-- Hero — dark viewfinder -->
     <section class="hero">
-        <div class="hero__badge">📍 GPS Camera · Video · 3D Scan</div>
-        <h1>Turn Every Photo & Video Into Verified Proof</h1>
-        <p class="hero__subtitle">GPS coordinates, map snapshots, addresses, and timestamps — composited directly onto your photos and videos. Plus 3D LiDAR scans and 360° panoramas, all processed on-device.</p>
-        <div class="hero__actions">
-            <a href="https://apps.apple.com/ph/app/verifeye-geotag-camera/id6761422889" class="btn-appstore" aria-label="Download VerifEye: GeoTag Camera on the App Store">
-                <img src="images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" height="52">
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=app.wartle.verifeye" class="btn-appstore" aria-label="Get it on Google Play">
-                <img src="images/GetItOnGooglePlay_Badge_Web_color_English.svg" alt="Get it on Google Play" height="52">
-            </a>
-            <a href="#features" class="btn btn-secondary">Learn More</a>
-        </div>
-        <div class="hero__image-wrapper">
-            <div class="hero__image-glow"></div>
-            <div class="media-skeleton media-skeleton--hero">
-                <img src="images/feature.png" alt="VerifEye: GeoTag Camera capture detail showing map overlay, GPS coordinates, and address" class="hero__image media-skeleton__img" width="1024" height="500" decoding="async">
+        <div class="hero__grid"></div>
+        <span class="corner corner--tl"></span>
+        <span class="corner corner--tr"></span>
+        <span class="corner corner--bl"></span>
+        <span class="corner corner--br"></span>
+
+        <div class="hero__inner">
+            <div class="hero__copy">
+                <span class="hero__eyebrow"><span class="rec-dot"></span> Live · GPS Camera · Video · 3D Scan</span>
+                <h1>Turn every photo &amp; video into <span class="verified">verified</span> proof.</h1>
+                <p class="hero__subtitle">GPS coordinates, a map thumbnail, address, and timestamp — burned straight onto your photos and videos. Plus 3D scans and 360° panoramas, all processed on your device.</p>
+                <div class="hero__actions">
+                    <a href="https://apps.apple.com/ph/app/verifeye-geotag-camera/id6761422889" class="btn-appstore" aria-label="Download VerifEye: GeoTag Camera on the App Store">
+                        <img src="images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" height="50">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=app.wartle.verifeye" class="btn-appstore" aria-label="Get it on Google Play">
+                        <img src="images/GetItOnGooglePlay_Badge_Web_color_English.svg" alt="Get it on Google Play" height="50">
+                    </a>
+                    <a href="#showcase" class="btn btn-ghost">See it in action</a>
+                </div>
+                <div class="hero__meta">
+                    <span><b>iOS</b> &amp; <b>Android</b></span>
+                    <span><b>Free</b> to start</span>
+                    <span><b>On-device</b> · no account</span>
+                </div>
+            </div>
+
+            <!-- Signature: a verified capture -->
+            <div class="capture">
+                <div class="capture__frame">
+                    <div class="capture__shot media-skeleton">
+                        <img src="images/feature.png" alt="VerifEye GeoTag Camera key art — an eye formed from a world map and a camera lens, with the tagline Capture, Locate, Verify" class="capture__img media-skeleton__img" width="1024" height="500" decoding="async">
+                        <span class="corner corner--tl"></span>
+                        <span class="corner corner--tr"></span>
+                        <span class="corner corner--bl"></span>
+                        <span class="corner corner--br"></span>
+                    </div>
+                    <div class="capture__overlay">
+                        <svg class="capture__pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c4.5-4.2 7-7.6 7-11a7 7 0 1 0-14 0c0 3.4 2.5 6.8 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                        <div class="capture__read">
+                            <div class="capture__coords"><span class="geo-num" data-to="10.3186" data-dec="4">10.3186</span>°N · <span class="geo-num" data-to="123.9057" data-dec="4">123.9057</span>°E</div>
+                            <div class="capture__sub">Cebu City, PH · ALT 17 m · 18 JUN 2026</div>
+                        </div>
+                        <span class="capture__verified"><span class="rec-dot"></span> Verified</span>
+                    </div>
+                </div>
+                <div class="capture__caption">Every capture · geotagged &amp; verified</div>
             </div>
         </div>
     </section>
+
+    <!-- Captures band -->
+    <section class="captures" id="showcase">
+        <div class="captures__inner">
+            <div class="captures__head">
+                <div>
+                    <span class="mono-label"><span class="rec-dot"></span> Actual captures</span>
+                    <h2>From capture to verified proof in seconds.</h2>
+                </div>
+                <p>Every shot carries its own evidence — map, coordinates, address, and time, composited on-device.</p>
+            </div>
+
+            <div class="shots stagger-children">
+                <figure class="shot fade-in">
+                    <div class="shot__frame media-skeleton">
+                        <img src="images/screenshots/screenshot-1.png" alt="VerifEye live viewfinder with real-time GPS coordinates" class="media-skeleton__img" width="600" height="1303" loading="lazy" decoding="async">
+                    </div>
+                    <figcaption class="shot__strip">
+                        <span class="idx">01</span> <span class="name">Camera View</span> <span>· live viewfinder, real-time GPS</span>
+                    </figcaption>
+                </figure>
+                <figure class="shot fade-in">
+                    <div class="shot__frame media-skeleton">
+                        <img src="images/screenshots/screenshot-2.png" alt="Photo detail with map overlay, coordinates, address, and altitude" class="media-skeleton__img" width="600" height="1303" loading="lazy" decoding="async">
+                    </div>
+                    <figcaption class="shot__strip">
+                        <span class="idx">02</span> <span class="name">Photo Detail</span> <span>· map, coordinates, address</span>
+                    </figcaption>
+                </figure>
+                <figure class="shot fade-in">
+                    <div class="shot__frame media-skeleton">
+                        <img src="images/screenshots/screenshot-3.png" alt="Capture location opened in Apple Maps" class="media-skeleton__img" width="600" height="1303" loading="lazy" decoding="async">
+                    </div>
+                    <figcaption class="shot__strip">
+                        <span class="idx">03</span> <span class="name">Maps Handoff</span> <span>· open any location in Maps</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust strip -->
+    <div class="trust">
+        <div class="trust__inner">
+            <div class="stat"><div class="stat__num">100%</div><div class="stat__label">On-device</div></div>
+            <div class="stat"><div class="stat__num">0</div><div class="stat__label">Accounts</div></div>
+            <div class="stat"><div class="stat__num">0</div><div class="stat__label">Trackers</div></div>
+            <div class="stat"><div class="stat__num">4</div><div class="stat__label">GPS formats</div></div>
+        </div>
+    </div>
 
     <!-- Features -->
     <section class="section features" id="features">
         <div class="container">
-            <div class="features__heading fade-in">
-                <h2>Everything You Need to Verify Location</h2>
-                <p>Powerful tools, beautifully simple.</p>
+            <div class="section__head section__head--center fade-in">
+                <span class="mono-label mono-label--center">The toolkit</span>
+                <h2>Everything you need to verify location</h2>
+                <p>One camera that records where, when, and what — in a form no one can question.</p>
             </div>
             <div class="features__grid stagger-children">
-                <div class="feature-card fade-in">
-                    <span class="feature-card__icon">📍</span>
+
+                <article class="feature-card fade-in">
+                    <div class="feature-card__top">
+                        <span class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c4.5-4.2 7-7.6 7-11a7 7 0 1 0-14 0c0 3.4 2.5 6.8 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+                        <span class="feature-card__idx">01</span>
+                    </div>
                     <h3>Location Verification</h3>
-                    <p>Every capture carries a map snapshot and GPS coordinates in your preferred format — decimal, degrees & minutes, DMS, or Plus Codes — plus address, altitude, and timestamp.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <span class="feature-card__icon">🎥</span>
+                    <p>Every capture carries a map snapshot and GPS coordinates in your preferred format — decimal, degrees &amp; minutes, DMS, or Plus Codes — plus address, altitude, and timestamp.</p>
+                </article>
+
+                <article class="feature-card fade-in">
+                    <div class="feature-card__top">
+                        <span class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6.5" width="12.5" height="11" rx="2"/><path d="m16 10.5 5-2.5v8l-5-2.5z"/><circle cx="7" cy="12" r="1.3" fill="currentColor" stroke="none"/></svg></span>
+                        <span class="feature-card__idx">02</span>
+                    </div>
                     <h3>GPS Video Recording</h3>
                     <p>Record video with the live location overlay burned right in, and export the full GPS track as GPX, CSV, or KML. Stabilization modes and HDR (HLG) capture included.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <span class="feature-card__icon">🧊</span>
-                    <h3>3D & LiDAR Scanning</h3>
+                </article>
+
+                <article class="feature-card fade-in">
+                    <div class="feature-card__top">
+                        <span class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6 20.5 7.3v9.4L12 21.4 3.5 16.7V7.3z"/><path d="M3.7 7.4 12 12l8.3-4.6"/><path d="M12 12v9.4"/></svg></span>
+                        <span class="feature-card__idx">03</span>
+                    </div>
+                    <h3>3D &amp; LiDAR Scanning</h3>
                     <p>Scan rooms with LiDAR or objects via photogrammetry. Get floor area and volume metrics, re-walk the result in a 6-DoF viewer, and export USDZ or PLY.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <span class="feature-card__icon">🌐</span>
+                </article>
+
+                <article class="feature-card fade-in">
+                    <div class="feature-card__top">
+                        <span class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><ellipse cx="12" cy="12" rx="4.2" ry="9"/></svg></span>
+                        <span class="feature-card__idx">04</span>
+                    </div>
                     <h3>360° PhotoSphere</h3>
                     <p>Stitch a full equirectangular panorama from high-resolution tiles, then explore it by drag or gyro. Export a geotagged Tiny Planet straight from any sphere.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <span class="feature-card__icon">🎨</span>
+                </article>
+
+                <article class="feature-card fade-in">
+                    <div class="feature-card__top">
+                        <span class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.3" y="3.3" width="11.4" height="11.4" rx="2"/><rect x="9.3" y="9.3" width="11.4" height="11.4" rx="2"/></svg></span>
+                        <span class="feature-card__idx">05</span>
+                    </div>
                     <h3>Customizable Overlays</h3>
-                    <p>Choose exactly what appears: GPS, address, date & time, altitude, pressure, weather, timezone, and a custom note. Strip or floating panel — plus your own logo in any corner.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <span class="feature-card__icon">📸</span>
+                    <p>Choose exactly what appears: GPS, address, date &amp; time, altitude, pressure, weather, timezone, and a custom note. Strip or floating panel — plus your own logo in any corner.</p>
+                </article>
+
+                <article class="feature-card fade-in">
+                    <div class="feature-card__top">
+                        <span class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6.5" width="19" height="13" rx="2.5"/><circle cx="12" cy="13" r="3.4"/><path d="M8.5 6.5 9.8 4.5h4.4l1.3 2"/></svg></span>
+                        <span class="feature-card__idx">06</span>
+                    </div>
                     <h3>Full Camera Control</h3>
-                    <p>Multi-lens support, dual-camera picture-in-picture, tap to focus, flash modes, shutter timer, 8 white balance presets, and front/back switching.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <span class="feature-card__icon">🗂️</span>
-                    <h3>Unified Gallery & Albums</h3>
+                    <p>Multi-lens support, dual-camera picture-in-picture, tap to focus, flash modes, shutter timer, 8 white-balance presets, and front/back switching.</p>
+                </article>
+
+                <article class="feature-card fade-in">
+                    <div class="feature-card__top">
+                        <span class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.3" y="3.3" width="7" height="7" rx="1.4"/><rect x="13.7" y="3.3" width="7" height="7" rx="1.4"/><rect x="3.3" y="13.7" width="7" height="7" rx="1.4"/><rect x="13.7" y="13.7" width="7" height="7" rx="1.4"/></svg></span>
+                        <span class="feature-card__idx">07</span>
+                    </div>
+                    <h3>Unified Gallery &amp; Albums</h3>
                     <p>Photos, videos, and 3D scans land in one chronological gallery. Organize into albums, multi-select, share in bulk, or open any location in Maps.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <span class="feature-card__icon">☁️</span>
-                    <h3>Cloud Sync & Offline Maps</h3>
-                    <p>On iPhone, optionally sync your library through your own private iCloud Drive. On any device, pre-download map tiles so the geotag minimap keeps rendering with no signal.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <span class="feature-card__icon">🔒</span>
+                </article>
+
+                <article class="feature-card fade-in">
+                    <div class="feature-card__top">
+                        <span class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 18.5a4 4 0 0 1-.4-7.98 5.2 5.2 0 0 1 10.06 1.2A3.6 3.6 0 0 1 16.5 18.5z"/><path d="m9.8 14 2.2-2.2 2.2 2.2"/><path d="M12 11.8v5"/></svg></span>
+                        <span class="feature-card__idx">08</span>
+                    </div>
+                    <h3>Cloud Sync &amp; Offline Maps</h3>
+                    <p>On iPhone and iPad, optionally sync your library through your own private iCloud Drive. On any device, pre-download map tiles so the geotag minimap keeps rendering with no signal.</p>
+                </article>
+
+                <article class="feature-card fade-in">
+                    <div class="feature-card__top">
+                        <span class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7 5 5.5v5.2c0 4.4 3 7.6 7 8.9 4-1.3 7-4.5 7-8.9V5.5z"/><path d="m9.2 11.7 1.9 1.9 3.7-3.9"/></svg></span>
+                        <span class="feature-card__idx">09</span>
+                    </div>
                     <h3>Privacy First</h3>
                     <p>Capture and compositing happen on-device. No accounts, no third-party tracking — and optional sync stays inside your own iCloud, never our servers.</p>
-                </div>
+                </article>
+
             </div>
         </div>
     </section>
 
-    <!-- Use Cases -->
+    <!-- Use cases -->
     <section class="section use-cases">
         <div class="container">
-            <h2 class="use-cases__heading fade-in">Built for Professionals</h2>
-            <p class="use-cases__subtitle fade-in">Photos that speak for themselves — no one can question where or when the shot was taken.</p>
+            <div class="section__head fade-in">
+                <span class="mono-label">Deployed in the field</span>
+                <h2>Built for professionals</h2>
+                <p>Photos that speak for themselves — no one can question where or when the shot was taken.</p>
+            </div>
             <div class="use-cases__grid fade-in">
-                <div class="use-case-tag"><span class="use-case-tag__icon">🏗️</span> Construction & Job Sites</div>
-                <div class="use-case-tag"><span class="use-case-tag__icon">📐</span> Property Surveying</div>
-                <div class="use-case-tag"><span class="use-case-tag__icon">📋</span> Insurance Documentation</div>
-                <div class="use-case-tag"><span class="use-case-tag__icon">📝</span> Field Reporting</div>
-                <div class="use-case-tag"><span class="use-case-tag__icon">📦</span> Delivery Verification</div>
-                <div class="use-case-tag"><span class="use-case-tag__icon">🌿</span> Environmental Monitoring</div>
-                <div class="use-case-tag"><span class="use-case-tag__icon">🏠</span> Real Estate & Listings</div>
-                <div class="use-case-tag"><span class="use-case-tag__icon">🔍</span> Inspections & Audits</div>
+                <span class="use-tag">Construction &amp; Job Sites</span>
+                <span class="use-tag">Property Surveying</span>
+                <span class="use-tag">Insurance Documentation</span>
+                <span class="use-tag">Field Reporting</span>
+                <span class="use-tag">Delivery Verification</span>
+                <span class="use-tag">Environmental Monitoring</span>
+                <span class="use-tag">Real Estate &amp; Listings</span>
+                <span class="use-tag">Inspections &amp; Audits</span>
             </div>
         </div>
     </section>
 
-    <!-- Screenshot Showcase -->
-    <section class="section showcase" id="showcase">
-        <div class="container">
-            <div class="showcase__heading fade-in">
-                <h2>See It in Action</h2>
-                <p>From capture to verified proof in seconds.</p>
-            </div>
-            <div class="showcase__grid stagger-children">
-                <div class="showcase__item fade-in">
-                    <div class="media-skeleton media-skeleton--phone">
-                        <img src="images/screenshots/screenshot-1.png" alt="VerifEye: GeoTag Camera live viewfinder with GPS coordinates" class="media-skeleton__img" width="600" height="1303" loading="lazy" decoding="async">
-                    </div>
-                    <p>Camera View</p>
-                    <span class="showcase__caption">Live viewfinder with real-time GPS</span>
-                </div>
-                <div class="showcase__item fade-in">
-                    <div class="media-skeleton media-skeleton--phone">
-                        <img src="images/screenshots/screenshot-2.png" alt="Photo detail with map overlay and location data" class="media-skeleton__img" width="600" height="1303" loading="lazy" decoding="async">
-                    </div>
-                    <p>Photo Detail</p>
-                    <span class="showcase__caption">Map, coordinates, address & altitude</span>
-                </div>
-                <div class="showcase__item fade-in">
-                    <div class="media-skeleton media-skeleton--phone">
-                        <img src="images/screenshots/screenshot-3.png" alt="Location opened in Apple Maps" class="media-skeleton__img" width="600" height="1303" loading="lazy" decoding="async">
-                    </div>
-                    <p>Maps Integration</p>
-                    <span class="showcase__caption">Open any location in Apple Maps</span>
-                </div>
-            </div>
+    <!-- Proof manifesto -->
+    <section class="section proof">
+        <div class="container proof__inner fade-in">
+            <span class="mono-label mono-label--center">The principle</span>
+            <p class="proof__quote">Capture and compositing happen <em>on your device</em>. No accounts, no servers — no one standing between you and the proof.</p>
+            <span class="proof__seal">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7 5 5.5v5.2c0 4.4 3 7.6 7 8.9 4-1.3 7-4.5 7-8.9V5.5z"/><path d="m9.2 11.7 1.9 1.9 3.7-3.9"/></svg>
+                On-device · privacy-first
+            </span>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-section" id="download">
-        <h2 class="fade-in">Start Verifying Your Photos Today</h2>
-        <p class="fade-in">Free download. No account required.</p>
-        <div class="fade-in cta-section__badges">
-            <a href="https://apps.apple.com/ph/app/verifeye-geotag-camera/id6761422889" class="btn-appstore" aria-label="Download VerifEye: GeoTag Camera on the App Store">
-                <img src="images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" height="52">
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=app.wartle.verifeye" class="btn-appstore" aria-label="Get it on Google Play">
-                <img src="images/GetItOnGooglePlay_Badge_Web_color_English.svg" alt="Get it on Google Play" height="52">
-            </a>
+    <!-- CTA — dark viewfinder bookend -->
+    <section class="cta" id="download">
+        <div class="hero__grid"></div>
+        <span class="corner corner--tl"></span>
+        <span class="corner corner--tr"></span>
+        <span class="corner corner--bl"></span>
+        <span class="corner corner--br"></span>
+        <div class="cta__inner fade-in">
+            <span class="mono-label mono-label--center"><span class="rec-dot"></span> Ready when you are</span>
+            <h2>Start turning photos into proof.</h2>
+            <p>Free to download. No account required.</p>
+            <div class="cta__badges">
+                <a href="https://apps.apple.com/ph/app/verifeye-geotag-camera/id6761422889" class="btn-appstore" aria-label="Download VerifEye: GeoTag Camera on the App Store">
+                    <img src="images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" height="50">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=app.wartle.verifeye" class="btn-appstore" aria-label="Get it on Google Play">
+                    <img src="images/GetItOnGooglePlay_Badge_Web_color_English.svg" alt="Get it on Google Play" height="50">
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer__inner">
-            <p class="footer__copy">&copy; 2026 Walter S. All rights reserved.</p>
+            <div>
+                <div class="footer__coords"><span class="rec-dot"></span> 10.3186°N · 123.9057°E · VERIFEYE</div>
+                <p class="footer__copy">&copy; 2026 Walter S. All rights reserved.</p>
+            </div>
             <div class="footer__links">
                 <a href="support.html">Support</a>
                 <a href="contact.html">Contact</a>

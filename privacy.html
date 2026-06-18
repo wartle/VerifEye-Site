@@ -8,7 +8,11 @@
     <link rel="icon" type="image/png" href="images/icons/default.png">
     <link rel="icon" type="image/png" href="images/icons/dark.png" media="(prefers-color-scheme: dark)">
     <link rel="apple-touch-icon" href="images/icons/default.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap">
     <link rel="stylesheet" href="css/styles.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
@@ -22,14 +26,14 @@
                     <span class="header__logo-subtitle">GeoTag Camera</span>
                 </span>
             </a>
-            <nav class="header__nav">
+            <nav class="header__nav" id="site-nav" aria-label="Primary">
                 <a href="index.html#features">Features</a>
                 <a href="index.html#showcase">Screenshots</a>
                 <a href="support.html">Support</a>
                 <a href="contact.html">Contact</a>
                 <a href="index.html#download" class="header__cta">Download</a>
             </nav>
-            <button class="header__hamburger" aria-label="Menu">
+            <button class="header__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -39,22 +43,31 @@
 
     <!-- Page Header -->
     <section class="page-header">
-        <h1>Privacy Policy</h1>
-        <p>Last updated: June 18, 2026</p>
+        <div class="page-header__grid"></div>
+        <span class="corner corner--tl"></span>
+        <span class="corner corner--tr"></span>
+        <span class="corner corner--bl"></span>
+        <span class="corner corner--br"></span>
+        <div class="page-header__inner">
+            <span class="mono-label">Privacy</span>
+            <h1>Privacy Policy</h1>
+            <p>Last updated June 18, 2026</p>
+        </div>
     </section>
 
     <!-- Content -->
-    <section class="section">
+    <section class="section page-body">
         <div class="container--narrow">
 
             <!-- Summary -->
             <div class="privacy-summary fade-in">
+                <span class="mono-label">At a glance</span>
                 <ul>
-                    <li>Capture and overlay compositing happen entirely on your device</li>
-                    <li>No account or sign-in required</li>
-                    <li>No third-party tracking, analytics, or advertising SDKs</li>
-                    <li>Cloud sync is optional, iOS-only, and uses your own private iCloud — never our servers</li>
-                    <li>VerifEye runs no servers that receive your photos, videos, or scans</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>Capture and overlay compositing happen entirely on your device</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>No account or sign-in required</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>No third-party tracking, analytics, or advertising SDKs</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>Cloud sync is optional, iOS-only, and uses your own private iCloud — never our servers</li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>VerifEye runs no servers that receive your photos, videos, or scans</li>
                 </ul>
             </div>
 
@@ -62,12 +75,12 @@
             <div class="content-card fade-in">
 
                 <div class="policy-section">
-                    <h2>Introduction</h2>
+                    <h2><span class="sct">01</span> Introduction</h2>
                     <p>VerifEye ("the App") is designed with your privacy as a core principle. This policy explains what data the App accesses, how it is used, and how it is stored. The short version: everything is processed on your device, and the only data that ever leaves it does so through services you choose to enable — optional iCloud sync (iPhone and iPad only), or the map and weather lookups that build the overlay.</p>
                 </div>
 
                 <div class="policy-section">
-                    <h2>Data We Access</h2>
+                    <h2><span class="sct">02</span> Data We Access</h2>
                     <p>To function, VerifEye requests access to:</p>
                     <ul>
                         <li><strong>Camera</strong> — to capture photos, videos, and 3D scans.</li>
@@ -80,7 +93,7 @@
                 </div>
 
                 <div class="policy-section">
-                    <h2>Data We Do NOT Collect</h2>
+                    <h2><span class="sct">03</span> Data We Do NOT Collect</h2>
                     <p>VerifEye does not collect, store, or transmit:</p>
                     <ul>
                         <li>Personal information (name, email, phone number)</li>
@@ -92,17 +105,17 @@
                 </div>
 
                 <div class="policy-section">
-                    <h2>How Your Data Is Stored</h2>
+                    <h2><span class="sct">04</span> How Your Data Is Stored</h2>
                     <p>Photos, videos, scans, and albums you create within VerifEye are stored locally on your device. If you delete the App, locally stored data is removed.</p>
                     <p>On iPhone and iPad, cloud sync is an optional feature that is off by default. When you enable it, your library is synced through your own private iCloud Drive (your personal Apple account) so it can be restored after a reinstall. VerifEye operates no servers of its own and never receives a copy of your captures — the data stays between your device and your Apple iCloud account, governed by Apple's privacy terms. The Android version does not include cloud sync; its data stays on the device.</p>
                 </div>
 
                 <div class="policy-section">
-                    <h2>Third-Party Services</h2>
+                    <h2><span class="sct">05</span> Third-Party Services</h2>
                     <p>To build the overlay, VerifEye relies on a few platform and mapping services. Only coordinates and standard request data are sent — never your photos, videos, scans, or identity:</p>
                     <ul>
                         <li><strong>Apple MapKit</strong> — generates live map thumbnails and reverse-geocoded addresses, subject to <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</li>
-                        <li><strong>Apple WeatherKit</strong> — provides the optional weather field in the overlay, subject to <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</li>
+                        <li><strong>Apple WeatherKit</strong> — provides the optional weather field in the overlay on all platforms (on Android via the WeatherKit REST API), subject to <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</li>
                         <li><strong>Google Maps Static API</strong> — used when you pre-download offline map tiles (and for live maps on Android); the area's coordinates are sent to Google to fetch tiles, subject to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
                         <li><strong>App Store / Google Play billing</strong> — handles in-app purchases and subscriptions; VerifEye never sees your payment details.</li>
                     </ul>
@@ -110,22 +123,22 @@
                 </div>
 
                 <div class="policy-section">
-                    <h2>Data Sharing</h2>
+                    <h2><span class="sct">06</span> Data Sharing</h2>
                     <p>VerifEye does not share your captures with third parties. When you use the share function, you are sharing the composited photo, video, or scan through your device's built-in share sheet — the App itself does not transmit that data anywhere.</p>
                 </div>
 
                 <div class="policy-section">
-                    <h2>Children's Privacy</h2>
+                    <h2><span class="sct">07</span> Children's Privacy</h2>
                     <p>VerifEye does not knowingly collect any personal information from children under the age of 13. The App does not require an account, and no personal data is collected from any user.</p>
                 </div>
 
                 <div class="policy-section">
-                    <h2>Changes to This Policy</h2>
+                    <h2><span class="sct">08</span> Changes to This Policy</h2>
                     <p>If we update this privacy policy, we will revise the "Last updated" date at the top of this page. We encourage you to review this policy periodically.</p>
                 </div>
 
                 <div class="policy-section">
-                    <h2>Contact Us</h2>
+                    <h2><span class="sct">09</span> Contact Us</h2>
                     <p>If you have any questions about this privacy policy, please contact us at <a href="mailto:support@wartle.app">support@wartle.app</a>.</p>
                 </div>
 
@@ -137,7 +150,10 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer__inner">
-            <p class="footer__copy">&copy; 2026 Walter S. All rights reserved.</p>
+            <div>
+                <div class="footer__coords"><span class="rec-dot"></span> 10.3186°N · 123.9057°E · VERIFEYE</div>
+                <p class="footer__copy">&copy; 2026 Walter S. All rights reserved.</p>
+            </div>
             <div class="footer__links">
                 <a href="support.html">Support</a>
                 <a href="contact.html">Contact</a>

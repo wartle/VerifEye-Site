@@ -8,7 +8,11 @@
     <link rel="icon" type="image/png" href="images/icons/default.png">
     <link rel="icon" type="image/png" href="images/icons/dark.png" media="(prefers-color-scheme: dark)">
     <link rel="apple-touch-icon" href="images/icons/default.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap">
     <link rel="stylesheet" href="css/styles.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
@@ -22,14 +26,14 @@
                     <span class="header__logo-subtitle">GeoTag Camera</span>
                 </span>
             </a>
-            <nav class="header__nav">
+            <nav class="header__nav" id="site-nav" aria-label="Primary">
                 <a href="index.html#features">Features</a>
                 <a href="index.html#showcase">Screenshots</a>
                 <a href="support.html">Support</a>
                 <a href="contact.html">Contact</a>
                 <a href="index.html#download" class="header__cta">Download</a>
             </nav>
-            <button class="header__hamburger" aria-label="Menu">
+            <button class="header__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -39,27 +43,39 @@
 
     <!-- Page Header -->
     <section class="page-header">
-        <h1>Get in Touch</h1>
-        <p>We'd love to hear from you.</p>
+        <div class="page-header__grid"></div>
+        <span class="corner corner--tl"></span>
+        <span class="corner corner--tr"></span>
+        <span class="corner corner--bl"></span>
+        <span class="corner corner--br"></span>
+        <div class="page-header__inner">
+            <span class="mono-label">Contact</span>
+            <h1>Get in touch</h1>
+            <p>We'd love to hear from you</p>
+        </div>
     </section>
 
     <!-- Content -->
-    <section class="section">
+    <section class="section page-body">
         <div class="container--narrow">
 
             <div class="content-card contact-card fade-in">
-                <h2>Email Us</h2>
-                <p>For support inquiries, bug reports, or feature requests, send us an email and we'll get back to you within 24–48 hours.</p>
-                <a href="mailto:support@wartle.app" class="btn btn-primary">support@wartle.app</a>
+                <h2>Email us</h2>
+                <p>For support inquiries, bug reports, or feature requests, email us at <strong>support@wartle.app</strong> and we'll get back to you within 24–48 hours.</p>
+                <a href="mailto:support@wartle.app" class="btn btn-primary">Email support</a>
             </div>
 
             <div class="content-card fade-in">
-                <h2>Before You Write</h2>
+                <h2>Before you write</h2>
                 <p>Check our <a href="support.html">Support page</a> — your question may already be answered in the FAQ.</p>
-                <h3>When reporting a bug, please include:</h3>
-                <p>Your device model, OS version, and a description of what happened versus what you expected. Screenshots are always helpful.</p>
-                <h3>Feature requests</h3>
-                <p>We love hearing how VerifEye can better fit your workflow. Tell us what you need and how you'd use it — the more detail, the better.</p>
+                <div class="policy-section">
+                    <h3><span class="sct">01</span> Reporting a bug</h3>
+                    <p>Include your device model, OS version, and a description of what happened versus what you expected. Screenshots are always helpful.</p>
+                </div>
+                <div class="policy-section">
+                    <h3><span class="sct">02</span> Feature requests</h3>
+                    <p>We love hearing how VerifEye can better fit your workflow. Tell us what you need and how you'd use it — the more detail, the better.</p>
+                </div>
             </div>
 
         </div>
@@ -68,7 +84,10 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer__inner">
-            <p class="footer__copy">&copy; 2026 Walter S. All rights reserved.</p>
+            <div>
+                <div class="footer__coords"><span class="rec-dot"></span> 10.3186°N · 123.9057°E · VERIFEYE</div>
+                <p class="footer__copy">&copy; 2026 Walter S. All rights reserved.</p>
+            </div>
             <div class="footer__links">
                 <a href="support.html">Support</a>
                 <a href="contact.html">Contact</a>
