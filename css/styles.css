@@ -123,6 +123,9 @@ p {
 .stagger-children .fade-in:nth-child(4) { transition-delay: 0.3s; }
 .stagger-children .fade-in:nth-child(5) { transition-delay: 0.4s; }
 .stagger-children .fade-in:nth-child(6) { transition-delay: 0.5s; }
+.stagger-children .fade-in:nth-child(7) { transition-delay: 0.6s; }
+.stagger-children .fade-in:nth-child(8) { transition-delay: 0.7s; }
+.stagger-children .fade-in:nth-child(9) { transition-delay: 0.8s; }
 
 /* --- Layout --- */
 .container {

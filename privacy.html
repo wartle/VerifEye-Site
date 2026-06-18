@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy — VerifEye: Geotag Camera</title>
-    <meta name="description" content="VerifEye privacy policy. All processing happens on-device. Your photos and location data stay on your phone.">
-    <link rel="icon" type="image/png" href="images/icons/VerifEye AppIcon.png">
-    <link rel="apple-touch-icon" href="images/icons/VerifEye AppIcon.png">
+    <title>Privacy Policy — VerifEye: GeoTag Camera</title>
+    <meta name="description" content="VerifEye privacy policy. Capture and compositing happen on-device. Optional sync stays inside your own private iCloud.">
+    <link rel="icon" type="image/png" href="images/icons/default.png">
+    <link rel="icon" type="image/png" href="images/icons/dark.png" media="(prefers-color-scheme: dark)">
+    <link rel="apple-touch-icon" href="images/icons/default.png">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -14,11 +15,11 @@
     <!-- Header -->
     <header class="header">
         <div class="header__inner">
-            <a href="index.html" class="header__logo" aria-label="VerifEye: Geotag Camera — Home">
-                <img src="images/icons/VerifEye AppIcon.png" alt="" width="36" height="36">
+            <a href="index.html" class="header__logo" aria-label="VerifEye: GeoTag Camera — Home">
+                <img src="images/icons/default.png" alt="" width="36" height="36">
                 <span class="header__logo-text">
                     <span class="header__logo-title">VerifEye</span>
-                    <span class="header__logo-subtitle">Geotag Camera</span>
+                    <span class="header__logo-subtitle">GeoTag Camera</span>
                 </span>
             </a>
             <nav class="header__nav">
@@ -39,7 +40,7 @@
     <!-- Page Header -->
     <section class="page-header">
         <h1>Privacy Policy</h1>
-        <p>Last updated: April 2, 2026</p>
+        <p>Last updated: June 18, 2026</p>
     </section>
 
     <!-- Content -->
@@ -49,11 +50,11 @@
             <!-- Summary -->
             <div class="privacy-summary fade-in">
                 <ul>
-                    <li>All photo processing happens entirely on your device</li>
-                    <li>No photos or location data are uploaded to external servers</li>
+                    <li>Capture and overlay compositing happen entirely on your device</li>
                     <li>No account or sign-in required</li>
                     <li>No third-party tracking, analytics, or advertising SDKs</li>
-                    <li>Your data stays on your phone — period</li>
+                    <li>Cloud sync is optional, iOS-only, and uses your own private iCloud — never our servers</li>
+                    <li>VerifEye runs no servers that receive your photos, videos, or scans</li>
                 </ul>
             </div>
 
@@ -62,19 +63,20 @@
 
                 <div class="policy-section">
                     <h2>Introduction</h2>
-                    <p>VerifEye ("the App") is designed with your privacy as a core principle. This policy explains what data the App accesses, how it is used, and how it is stored. The short version: everything stays on your device.</p>
+                    <p>VerifEye ("the App") is designed with your privacy as a core principle. This policy explains what data the App accesses, how it is used, and how it is stored. The short version: everything is processed on your device, and the only data that ever leaves it does so through services you choose to enable — optional iCloud sync (iPhone and iPad only), or the map and weather lookups that build the overlay.</p>
                 </div>
 
                 <div class="policy-section">
                     <h2>Data We Access</h2>
                     <p>To function, VerifEye requests access to:</p>
                     <ul>
-                        <li><strong>Camera</strong> — to capture photos.</li>
-                        <li><strong>Location</strong> — to obtain GPS coordinates, altitude, and reverse-geocoded addresses for overlay compositing.</li>
-                        <li><strong>Photo Library</strong> — to save geotagged photos and to let you select a custom logo image.</li>
-                        <li><strong>Barometer</strong> — to read barometric pressure data for the overlay.</li>
+                        <li><strong>Camera</strong> — to capture photos, videos, and 3D scans.</li>
+                        <li><strong>Microphone</strong> — to record audio when you capture video.</li>
+                        <li><strong>Location</strong> — to obtain GPS coordinates, altitude, and reverse-geocoded addresses for overlay compositing and video track logging.</li>
+                        <li><strong>Photo Library</strong> — to save geotagged captures and to let you select a custom logo image.</li>
+                        <li><strong>Barometer &amp; motion sensors</strong> — to read barometric pressure for the overlay and to drive the gyro-based 360°/3D viewers.</li>
                     </ul>
-                    <p>All of this data is processed locally on your device. None of it is transmitted to any server.</p>
+                    <p>This data is processed on your device. It is not sent to any VerifEye server — the only exceptions are the optional third-party lookups described below (maps and weather) and, on iPhone and iPad, your own private iCloud if you turn on sync.</p>
                 </div>
 
                 <div class="policy-section">
@@ -85,23 +87,31 @@
                         <li>Usage analytics or telemetry</li>
                         <li>Advertising identifiers</li>
                         <li>Device fingerprints</li>
-                        <li>Any data to third-party servers</li>
+                        <li>Your photos, videos, or scans to any VerifEye-operated server</li>
                     </ul>
                 </div>
 
                 <div class="policy-section">
                     <h2>How Your Data Is Stored</h2>
-                    <p>Photos and albums you create within VerifEye are stored locally on your device. The App does not include any cloud sync, backup, or server-side storage functionality. If you delete the App, locally stored album data is removed.</p>
+                    <p>Photos, videos, scans, and albums you create within VerifEye are stored locally on your device. If you delete the App, locally stored data is removed.</p>
+                    <p>On iPhone and iPad, cloud sync is an optional feature that is off by default. When you enable it, your library is synced through your own private iCloud Drive (your personal Apple account) so it can be restored after a reinstall. VerifEye operates no servers of its own and never receives a copy of your captures — the data stays between your device and your Apple iCloud account, governed by Apple's privacy terms. The Android version does not include cloud sync; its data stays on the device.</p>
                 </div>
 
                 <div class="policy-section">
                     <h2>Third-Party Services</h2>
-                    <p>VerifEye uses Apple's MapKit framework to generate map thumbnail overlays. Map tile requests are handled by Apple's servers and are subject to <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>. VerifEye does not use any other third-party services, SDKs, or APIs.</p>
+                    <p>To build the overlay, VerifEye relies on a few platform and mapping services. Only coordinates and standard request data are sent — never your photos, videos, scans, or identity:</p>
+                    <ul>
+                        <li><strong>Apple MapKit</strong> — generates live map thumbnails and reverse-geocoded addresses, subject to <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</li>
+                        <li><strong>Apple WeatherKit</strong> — provides the optional weather field in the overlay, subject to <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</li>
+                        <li><strong>Google Maps Static API</strong> — used when you pre-download offline map tiles (and for live maps on Android); the area's coordinates are sent to Google to fetch tiles, subject to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+                        <li><strong>App Store / Google Play billing</strong> — handles in-app purchases and subscriptions; VerifEye never sees your payment details.</li>
+                    </ul>
+                    <p>VerifEye does not embed any third-party analytics, advertising, or tracking SDKs.</p>
                 </div>
 
                 <div class="policy-section">
                     <h2>Data Sharing</h2>
-                    <p>VerifEye does not share any data with third parties. When you use the share function, you are sharing the composited photo through iOS's built-in share sheet — the App itself does not transmit data.</p>
+                    <p>VerifEye does not share your captures with third parties. When you use the share function, you are sharing the composited photo, video, or scan through your device's built-in share sheet — the App itself does not transmit that data anywhere.</p>
                 </div>
 
                 <div class="policy-section">

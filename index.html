@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VerifEye: Geotag Camera — Turn Every Photo Into Verified Proof</title>
-    <meta name="description" content="VerifEye: Geotag Camera burns GPS coordinates, map thumbnails, addresses, timestamps, and more directly onto your photos. Verifiable proof of location, on-device.">
-    <link rel="icon" type="image/png" href="images/icons/VerifEye AppIcon.png">
-    <link rel="apple-touch-icon" href="images/icons/VerifEye AppIcon.png">
+    <title>VerifEye: GeoTag Camera — Turn Every Photo & Video Into Verified Proof</title>
+    <meta name="description" content="VerifEye: GeoTag Camera burns GPS coordinates, map thumbnails, addresses, and timestamps onto your photos and videos — and captures 3D LiDAR scans and 360° panoramas. Verifiable proof of location, on-device.">
+    <link rel="icon" type="image/png" href="images/icons/default.png">
+    <link rel="icon" type="image/png" href="images/icons/dark.png" media="(prefers-color-scheme: dark)">
+    <link rel="apple-touch-icon" href="images/icons/default.png">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -14,11 +15,11 @@
     <!-- Header -->
     <header class="header">
         <div class="header__inner">
-            <a href="index.html" class="header__logo" aria-label="VerifEye: Geotag Camera — Home">
-                <img src="images/icons/VerifEye AppIcon.png" alt="" width="36" height="36">
+            <a href="index.html" class="header__logo" aria-label="VerifEye: GeoTag Camera — Home">
+                <img src="images/icons/default.png" alt="" width="36" height="36">
                 <span class="header__logo-text">
                     <span class="header__logo-title">VerifEye</span>
-                    <span class="header__logo-subtitle">Geotag Camera</span>
+                    <span class="header__logo-subtitle">GeoTag Camera</span>
                 </span>
             </a>
             <nav class="header__nav">
@@ -38,11 +39,11 @@
 
     <!-- Hero -->
     <section class="hero">
-        <div class="hero__badge">📍 Location Verification Camera</div>
-        <h1>Turn Every Photo Into Verified Proof</h1>
-        <p class="hero__subtitle">GPS coordinates, map snapshots, addresses, and timestamps — composited directly onto your photos, on-device.</p>
+        <div class="hero__badge">📍 GPS Camera · Video · 3D Scan</div>
+        <h1>Turn Every Photo & Video Into Verified Proof</h1>
+        <p class="hero__subtitle">GPS coordinates, map snapshots, addresses, and timestamps — composited directly onto your photos and videos. Plus 3D LiDAR scans and 360° panoramas, all processed on-device.</p>
         <div class="hero__actions">
-            <a href="https://apps.apple.com/ph/app/verifeye-geotag-camera/id6761422889" class="btn-appstore" aria-label="Download VerifEye: Geotag Camera on the App Store">
+            <a href="https://apps.apple.com/ph/app/verifeye-geotag-camera/id6761422889" class="btn-appstore" aria-label="Download VerifEye: GeoTag Camera on the App Store">
                 <img src="images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" height="52">
             </a>
             <a href="https://play.google.com/store/apps/details?id=app.wartle.verifeye" class="btn-appstore" aria-label="Get it on Google Play">
@@ -53,7 +54,7 @@
         <div class="hero__image-wrapper">
             <div class="hero__image-glow"></div>
             <div class="media-skeleton media-skeleton--hero">
-                <img src="images/feature.png" alt="VerifEye: Geotag Camera photo detail showing map overlay, GPS coordinates, and address" class="hero__image media-skeleton__img" width="1024" height="500" decoding="async">
+                <img src="images/feature.png" alt="VerifEye: GeoTag Camera capture detail showing map overlay, GPS coordinates, and address" class="hero__image media-skeleton__img" width="1024" height="500" decoding="async">
             </div>
         </div>
     </section>
@@ -69,32 +70,47 @@
                 <div class="feature-card fade-in">
                     <span class="feature-card__icon">📍</span>
                     <h3>Location Verification</h3>
-                    <p>Every photo includes a map snapshot and GPS coordinates in your preferred format — decimal, degrees & minutes, DMS, or Plus Codes.</p>
+                    <p>Every capture carries a map snapshot and GPS coordinates in your preferred format — decimal, degrees & minutes, DMS, or Plus Codes — plus address, altitude, and timestamp.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <span class="feature-card__icon">🎥</span>
+                    <h3>GPS Video Recording</h3>
+                    <p>Record video with the live location overlay burned right in, and export the full GPS track as GPX, CSV, or KML. Stabilization modes and HDR (HLG) capture included.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <span class="feature-card__icon">🧊</span>
+                    <h3>3D & LiDAR Scanning</h3>
+                    <p>Scan rooms with LiDAR or objects via photogrammetry. Get floor area and volume metrics, re-walk the result in a 6-DoF viewer, and export USDZ or PLY.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <span class="feature-card__icon">🌐</span>
+                    <h3>360° PhotoSphere</h3>
+                    <p>Stitch a full equirectangular panorama from high-resolution tiles, then explore it by drag or gyro. Export a geotagged Tiny Planet straight from any sphere.</p>
                 </div>
                 <div class="feature-card fade-in">
                     <span class="feature-card__icon">🎨</span>
                     <h3>Customizable Overlays</h3>
-                    <p>Choose what data appears on your photos: GPS, address, date & time, altitude, pressure, timezone, and more. Strip or floating panel layout.</p>
+                    <p>Choose exactly what appears: GPS, address, date & time, altitude, pressure, weather, timezone, and a custom note. Strip or floating panel — plus your own logo in any corner.</p>
                 </div>
                 <div class="feature-card fade-in">
                     <span class="feature-card__icon">📸</span>
                     <h3>Full Camera Control</h3>
-                    <p>Multi-lens support, tap to focus, flash modes, shutter timer, 8 white balance presets, and front/back camera switching.</p>
+                    <p>Multi-lens support, dual-camera picture-in-picture, tap to focus, flash modes, shutter timer, 8 white balance presets, and front/back switching.</p>
                 </div>
                 <div class="feature-card fade-in">
-                    <span class="feature-card__icon">🏷️</span>
-                    <h3>Custom Branding</h3>
-                    <p>Add your company logo or watermark in any corner. Include custom notes or hashtags on every shot.</p>
+                    <span class="feature-card__icon">🗂️</span>
+                    <h3>Unified Gallery & Albums</h3>
+                    <p>Photos, videos, and 3D scans land in one chronological gallery. Organize into albums, multi-select, share in bulk, or open any location in Maps.</p>
                 </div>
                 <div class="feature-card fade-in">
-                    <span class="feature-card__icon">📁</span>
-                    <h3>Album Organization</h3>
-                    <p>Create albums to keep projects separate. Browse, multi-select, share in bulk, or open locations directly in Apple Maps.</p>
+                    <span class="feature-card__icon">☁️</span>
+                    <h3>Cloud Sync & Offline Maps</h3>
+                    <p>On iPhone, optionally sync your library through your own private iCloud Drive. On any device, pre-download map tiles so the geotag minimap keeps rendering with no signal.</p>
                 </div>
                 <div class="feature-card fade-in">
                     <span class="feature-card__icon">🔒</span>
                     <h3>Privacy First</h3>
-                    <p>All processing happens on-device. Your photos and location data never leave your phone.</p>
+                    <p>Capture and compositing happen on-device. No accounts, no third-party tracking — and optional sync stays inside your own iCloud, never our servers.</p>
                 </div>
             </div>
         </div>
@@ -112,6 +128,8 @@
                 <div class="use-case-tag"><span class="use-case-tag__icon">📝</span> Field Reporting</div>
                 <div class="use-case-tag"><span class="use-case-tag__icon">📦</span> Delivery Verification</div>
                 <div class="use-case-tag"><span class="use-case-tag__icon">🌿</span> Environmental Monitoring</div>
+                <div class="use-case-tag"><span class="use-case-tag__icon">🏠</span> Real Estate & Listings</div>
+                <div class="use-case-tag"><span class="use-case-tag__icon">🔍</span> Inspections & Audits</div>
             </div>
         </div>
     </section>
@@ -126,7 +144,7 @@
             <div class="showcase__grid stagger-children">
                 <div class="showcase__item fade-in">
                     <div class="media-skeleton media-skeleton--phone">
-                        <img src="images/screenshots/screenshot-1.png" alt="VerifEye: Geotag Camera live viewfinder with GPS coordinates" class="media-skeleton__img" width="600" height="1303" loading="lazy" decoding="async">
+                        <img src="images/screenshots/screenshot-1.png" alt="VerifEye: GeoTag Camera live viewfinder with GPS coordinates" class="media-skeleton__img" width="600" height="1303" loading="lazy" decoding="async">
                     </div>
                     <p>Camera View</p>
                     <span class="showcase__caption">Live viewfinder with real-time GPS</span>
@@ -154,7 +172,7 @@
         <h2 class="fade-in">Start Verifying Your Photos Today</h2>
         <p class="fade-in">Free download. No account required.</p>
         <div class="fade-in cta-section__badges">
-            <a href="https://apps.apple.com/ph/app/verifeye-geotag-camera/id6761422889" class="btn-appstore" aria-label="Download VerifEye: Geotag Camera on the App Store">
+            <a href="https://apps.apple.com/ph/app/verifeye-geotag-camera/id6761422889" class="btn-appstore" aria-label="Download VerifEye: GeoTag Camera on the App Store">
                 <img src="images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" height="52">
             </a>
             <a href="https://play.google.com/store/apps/details?id=app.wartle.verifeye" class="btn-appstore" aria-label="Get it on Google Play">
